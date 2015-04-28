@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Video:</strong>
+  <%= @episode.video_id %>
+</p>
+
+<p>
+  <strong>Game:</strong>
+  <%= @episode.game %>
+</p>
+
+<p>
+  <strong>Show:</strong>
+  <%= @episode.show %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @episode.title %>
+</p>
+
+<p>
+  <strong>Part:</strong>
+  <%= @episode.part %>
+</p>
+
+<p>
+  <strong>Duration:</strong>
+  <%= @episode.duration %>
+</p>
+
+<p>
+  <strong>Thumbnail url:</strong>
+  <%= @episode.thumbnail_url %>
+</p>
+
+<%= link_to 'Edit', edit_episode_path(@episode) %> |
+<%= link_to 'Back', episodes_path %>
