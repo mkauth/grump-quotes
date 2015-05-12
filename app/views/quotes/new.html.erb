@@ -1,0 +1,51 @@
+<h1>New Quote</h1>
+<%= form_for(@quote) do |f| %>
+  <% if @quote.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@quote.errors.count, "error") %> prohibited this quote from being saved:</h2>
+
+      <ul>
+      <% @quote.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+	<label for="show_dropdown">Show</label><br>
+	<select id="show_dropdown" name="show">
+		<option value="">Select a show</option>
+		<% @showlist.each do |item| %>
+			<option value="<%= item[:show] %>"><%= item[:show] %></option>
+		<% end %>
+	</select>
+  </div>
+  <div class="field">
+	<label for="game_dropdown">Game</label><br>
+	<select id="game_dropdown" name="game">
+		<option value="">Select a game</option>
+	</select>
+  </div>
+  <div class="field">
+	<label for="part_dropdown">Part</label><br>
+	<select id="part_dropdown" name="part">
+		<option value="">Select part</option>
+	</select>
+  </div>
+  <div class="field">
+    <label for="quote_content">Quote</label><br>
+    <%= f.text_area :content %>
+  </div>
+  <div class="field">
+    <%= f.label :time %><br>
+	<i>enter in the form of XhXmXs</i><br>
+    <%= f.text_field :time %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+
+<%= link_to 'Back', quotes_path %>

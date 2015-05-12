@@ -1,0 +1,29 @@
+<%= render 'searchform' %>
+<a href='/quotes/new'>Add new quote</a><style>
+	td {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+</style>
+<table>
+	<% @quotes.each do |quote| %>
+		<tr>
+			<td>
+				<a href='https://www.youtube.com/watch?v=<%= quote.episode[:video_id] %>'>
+				<img src='<%= quote.episode[:thumbnail_url] %>'>
+				</a>
+			</td>
+			<td>
+				<%= quote.episode[:game] %>: <%= quote.episode[:title] %>
+			</td>
+			<td>
+				"<%= quote[:content] %>"
+			</td>
+			<td>
+				<a href='https://www.youtube.com/watch?v=<%= quote.episode[:video_id] %>&t=<%= quote[:time] %>'>
+				<%= quote[:time] %>
+				</a>
+			</td>
+		</tr>
+	<% end %>
+</table>

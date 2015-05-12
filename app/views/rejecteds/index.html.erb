@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Rejecteds</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rejecteds.each do |rejected| %>
+      <tr>
+        <td><%= rejected.name %></td>
+        <td><%= link_to 'Show', rejected %></td>
+        <td><%= link_to 'Edit', edit_rejected_path(rejected) %></td>
+        <td><%= link_to 'Destroy', rejected, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Rejected', new_rejected_path %>
