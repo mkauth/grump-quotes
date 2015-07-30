@@ -1,6 +1,3 @@
 == README
 
 When running the app there might be an error that comes up regarding ssl certificates. This is a problem with ruby and not the code. The fix I used on my computer for this can be found at https://gist.github.com/fnichol/867550. Just follow those    instructions and it should take care of the error.
-
-
-
