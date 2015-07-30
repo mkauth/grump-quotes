@@ -1,28 +1,6 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+When running the app there might be an error that comes up regarding ssl certificates. This is a problem with ruby and not the code. The fix I used on my computer for this can be found at https://gist.github.com/fnichol/867550. Just follow those    instructions and it should take care of the error.
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+
