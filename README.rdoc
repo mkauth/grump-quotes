@@ -1,3 +1,6 @@
 == README
+Game Grumps is a youtube channel where a couple guys get together to play games and and just talk about stuff. THere are a lot of times when fans of the show will want to see certain moments or hear certain quotes again but the problem is there is a lot of content to deal with.
+
+This application allows users to add information on quotes such as which video it's from and when it occurs. Users can then search quotes to get this information and links to the videos those quotes live in.
 
 When running the app there might be an error that comes up regarding ssl certificates. This is a problem with ruby and not the code. The fix I used on my computer for this can be found at https://gist.github.com/fnichol/867550. Just follow those    instructions and it should take care of the error.
